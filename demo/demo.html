@@ -2,21 +2,21 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="test">
-    <meta name="author" content="FT">
-    <!-- <meta name="branch:deeplink:ft-foo" content="bar" /> -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script id="branch-init"></script>
-    <script>
-    $(document).ready(function(){
-        $('#branch-init').load("./template.html");
-    });
+    <script type="text/javascript">
+
+        (function(b,r,a,n,c,h,_,s,d,k){if(!b[n]||!b[n]._q){for(;s<_.length;)c(h,_[s++]);d=r.createElement(a);d.async=1;d.src="https://cdn.branch.io/branch-latest.min.js";k=r.getElementsByTagName(a)[0];k.parentNode.insertBefore(d,k);b[n]=h}})(window,document,"script","branch",function(b,r){b[r]=function(){b._q.push([r,arguments])}},{_q:[],_v:1},"addListener applyCode autoAppIndex banner closeBanner closeJourney creditHistory credits data deepview deepviewCta first getCode init link logout redeem referrals removeListener sendSMS setBranchViewData setIdentity track validateCode trackCommerceEvent logEvent disableTracking getBrowserFingerprintId".split(" "), 0);
+        
+        console.log('initializing branch SDK')
+    
+        branch.init('key_live_iiSj3B1NXPps47pTwd3gflkiBFkVTEYm', function(err, data) {
+            if (err) {
+            console.log('error initializing web page: ', err)
+            return
+            }
+            console.log('initalized SDK: ', data)
+        });
     </script>
-    
-    
-    <title>FT Test</title>
+    <title>FT demo</title>
 </head>
 
 <body>this is a third-page banner</body>
